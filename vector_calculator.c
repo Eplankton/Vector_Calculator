@@ -1,3 +1,4 @@
+//From : Eplankton   Time : 2021/7/19
 #include <stdio.h>
 
 void vectorInput(int, int *);
@@ -8,9 +9,9 @@ void vectorDotproduct();
 int main()
 {
 
-    int k = 1;
+    int key = 1;
 
-    for (; k > 0;)
+    for (; key > 0;)
     {
         printf("\n\n");
         printf("                           ----------------------\n");
@@ -21,9 +22,9 @@ int main()
         printf("                           |       Exit      :0 |\n");
         printf("                           ----------------------\n");
         printf("                            please enter : ");
-        scanf("%d", &k);
+        scanf("%d", &key);
 
-        switch (k)
+        switch (key)
         {
         case 1:
             vectorAddition();
@@ -48,6 +49,7 @@ void vectorAddition()
     int i = 0;
     printf("\nSet the dimension = "); //Set the whole-environment dimension.
     scanf("%d", &dimension);
+    printf("\nWARNING :The dimension has been set as '%d' ,and it can't change during calculation !", dimension);
 
     getchar();
     int fst[dimension];
@@ -87,6 +89,7 @@ void vectorDotproduct()
     int i = 0;
     printf("\nSet the dimension = "); //Set the whole-environment dimension.
     scanf("%d", &dimension);
+    printf("\nWARNING :The dimension has been set as '%d' ,and it can't change during calculation !", dimension);
 
     getchar();
     int fst[dimension];
@@ -114,6 +117,7 @@ void vectorSubtraction()
     int i = 0;
     printf("\nSet the dimension = "); //Set the whole-environment dimension.
     scanf("%d", &dimension);
+    printf("\nWARNING :The dimension has been set as '%d' ,and it can't change during calculation !", dimension);
 
     getchar();
     int fst[dimension];
