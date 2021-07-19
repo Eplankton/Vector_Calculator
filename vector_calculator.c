@@ -159,7 +159,7 @@ void vectorCrossproduct()
     int dimension = 3;
     int i = 0;
     printf("\nSet the dimension = 3"); //Cross product only has definition in three-dimension.
-    printf("\nWARNING :The dimension has been set as '%d' ,and it can't change during calculation !", dimension);
+    printf("\nWARNING :Cross product only has definition in three-dimension !", dimension);
 
     getchar();
     int fst[dimension];
