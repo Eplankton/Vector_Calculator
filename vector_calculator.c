@@ -1,0 +1,187 @@
+#include <stdio.h>
+
+void vectorInput(int, int *);
+void vectorAddition();
+void vectorSubtraction();
+void vectorDotproduct();
+
+int main()
+{
+
+    int k = 1;
+
+    for (; k > 0;)
+    {
+        printf("\n\n");
+        printf("                           ----------------------\n");
+        printf("                           |    # Vector #      |\n");
+        printf("                           |        +        :1 |\n");
+        printf("                           |        -        :2 |\n");
+        printf("                           |        .        :3 |\n");
+        printf("                           |       Exit      :0 |\n");
+        printf("                           ----------------------\n");
+        printf("                            please enter : ");
+        scanf("%d", &k);
+
+        switch (k)
+        {
+        case 1:
+            vectorAddition();
+            break;
+        case 2:
+            vectorSubtraction();
+            break;
+        case 3:
+            vectorDotproduct();
+            break;
+        case 0:
+            break;
+        }
+    }
+
+    return 0;
+}
+
+void vectorAddition()
+{
+    int dimension;
+    int i = 0;
+    printf("\nSet the dimension = "); //Set the whole-environment dimension.
+    scanf("%d", &dimension);
+
+    getchar();
+    int fst[dimension];
+    int *p = &fst[0];
+    vectorInput(dimension, p);
+
+    getchar();
+    int sec[dimension];
+    int *q = &sec[0];
+    vectorInput(dimension, q);
+
+    int result[dimension];
+
+    for (i = 0; i < dimension; i++)
+    {
+        result[i] = fst[i] + sec[i];
+    }
+
+    printf("\nThe result of vector-addition is = ( ");
+
+    for (i = 0; i < dimension; i++)
+    {
+        if (i < dimension - 1)
+        {
+            printf("%d, ", result[i]);
+        }
+        else
+        {
+            printf("%d )\n\n", result[i]);
+        }
+    }
+}
+
+void vectorDotproduct()
+{
+    int dimension;
+    int i = 0;
+    printf("\nSet the dimension = "); //Set the whole-environment dimension.
+    scanf("%d", &dimension);
+
+    getchar();
+    int fst[dimension];
+    int *p = &fst[0];
+    vectorInput(dimension, p);
+
+    getchar();
+    int sec[dimension];
+    int *q = &sec[0];
+    vectorInput(dimension, q);
+
+    int result = 0;
+
+    for (i = 0; i < dimension; i++)
+    {
+        result += fst[i] * sec[i];
+    }
+
+    printf("\nThe result of vector dot-product is = %d \n", result);
+}
+
+void vectorSubtraction()
+{
+    int dimension;
+    int i = 0;
+    printf("\nSet the dimension = "); //Set the whole-environment dimension.
+    scanf("%d", &dimension);
+
+    getchar();
+    int fst[dimension];
+    int *p = &fst[0];
+    vectorInput(dimension, p);
+
+    getchar();
+    int sec[dimension];
+    int *q = &sec[0];
+    vectorInput(dimension, q);
+
+    int result[dimension];
+
+    for (i = 0; i < dimension; i++)
+    {
+        result[i] = fst[i] - sec[i];
+    }
+
+    printf("\nThe result of vector-addition is = ( ");
+
+    for (i = 0; i < dimension; i++)
+    {
+        if (i < dimension - 1)
+        {
+            printf("%d, ", result[i]);
+        }
+        else
+        {
+            printf("%d )\n\n", result[i]);
+        }
+    }
+}
+
+void vectorInput(int dimension, int *p)
+{
+    char vectorName;
+    printf("\n\nSet the vector name as =  ");
+    scanf("%c", &vectorName);
+    printf("\n");
+
+    if (dimension < 2)
+    {
+        printf("\nError ! The dimension should be 2 at least .\n");
+        printf("\nSet the dimension = ");
+        scanf("%d", &dimension);
+    }
+
+    int n = 0;
+    int a[dimension];
+
+    for (n = 0; n < dimension; n++)
+    {
+        printf("\nthe %c(%d) is = ", vectorName, n + 1);
+        scanf("%d", &a[n]);
+        *(p + n) = a[n];
+    }
+
+    printf("\nThe vector '%c' is = ( ", vectorName);
+
+    for (n = 0; n < dimension; n++)
+    {
+        if (n < dimension - 1)
+        {
+            printf("%d, ", a[n]);
+        }
+        else
+        {
+            printf("%d )\n", a[n]);
+        }
+    }
+}
