@@ -1,4 +1,4 @@
-//From : Eplanlkton  Date : 2021/7/20
+//From: Eplanlkton  Date: 2021/7/20
 #include <stdio.h>
 
 void vectorInput(int, int *);
