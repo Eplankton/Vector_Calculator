@@ -1,6 +1,6 @@
-//From: Eplanlkton  Date: 2021/7/20
-#include <stdio.h>
+//From : Eplanlkton  Date : 2021/7/20
 
+#include <stdio.h>
 void vectorInput(int, int *);
 void vectorAddition();
 void vectorSubtraction();
@@ -9,7 +9,7 @@ void vectorCrossproduct();
 
 int main()
 {
-    int key = 1;
+    int key = 1;    //User Interface
 
     for (; key > 0;)
     {
@@ -193,7 +193,7 @@ void vectorCrossproduct()
     }
 }
 
-void vectorInput(int dimension, int *p)
+void vectorInput(int dimension, int *r)
 {
     char vectorName;
     printf("\n\nSet the vector name as =  ");
@@ -214,7 +214,7 @@ void vectorInput(int dimension, int *p)
     {
         printf("\nthe %c(%d) is = ", vectorName, n + 1);
         scanf("%d", &a[n]);
-        *(p + n) = a[n];
+        *(r + n) = a[n];        //A pointer to transport value outwards the function.
     }
 
     printf("\nThe vector '%c' is = ( ", vectorName);
