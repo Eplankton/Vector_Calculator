@@ -1,2 +1,2 @@
 # Vector_Calculator
-A calculator allows vector addition, subtraction, dot/cross product . 
+Allows vector addition, subtraction, dot/cross product . 
