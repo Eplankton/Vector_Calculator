@@ -1,51 +1,9 @@
 //From : Eplanlkton  Date : 2021/7/20
-
-#include <stdio.h>
 void vectorInput(int, int *);
 void vectorAddition();
 void vectorSubtraction();
 void vectorDotproduct();
 void vectorCrossproduct();
-
-int main()
-{
-    int key = 1;    //User Interface
-
-    for (; key > 0;)
-    {
-        printf("\n\n");
-        printf("                           ----------------------\n");
-        printf("                           |    # Vector #      |\n");
-        printf("                           |        +        :1 |\n");
-        printf("                           |        -        :2 |\n");
-        printf("                           |        .        :3 |\n");
-        printf("                           |        x        :4 |\n");
-        printf("                           |       Exit      :0 |\n");
-        printf("                           ----------------------\n");
-        printf("                            please enter : ");
-        scanf("%d", &key);
-
-        switch (key)
-        {
-        case 1:
-            vectorAddition();
-            break;
-        case 2:
-            vectorSubtraction();
-            break;
-        case 3:
-            vectorDotproduct();
-            break;
-        case 4:
-            vectorCrossproduct();
-            break;
-        case 0:
-            break;
-        }
-    }
-
-    return 0;
-}
 
 void vectorAddition()
 {
@@ -53,7 +11,7 @@ void vectorAddition()
     int i = 0;
     printf("\nSet the dimension = "); //Set the whole-environment dimension.
     scanf("%d", &dimension);
-    printf("\nWARNING :The dimension has been set as '%d' ,and it can't change during calculation !", dimension);
+    printf("\nWARNING: The dimension has been set as '%d' ,and it can't be modified during calculation !", dimension);
 
     getchar();
     int fst[dimension];
@@ -195,9 +153,9 @@ void vectorCrossproduct()
 
 void vectorInput(int dimension, int *r)
 {
-    char vectorName;
+    char vectorName[30];
     printf("\n\nSet the vector name as =  ");
-    scanf("%c", &vectorName);
+    scanf("%s", vectorName);
     printf("\n");
 
     if (dimension < 2)
@@ -209,15 +167,15 @@ void vectorInput(int dimension, int *r)
 
     int n = 0;
     int a[dimension];
-
+    
     for (n = 0; n < dimension; n++)
     {
-        printf("\nthe %c(%d) is = ", vectorName, n + 1);
+        printf("\nthe %s(%d) is = ", vectorName, n + 1);
         scanf("%d", &a[n]);
         *(r + n) = a[n];        //A pointer to transport value outwards the function.
     }
 
-    printf("\nThe vector '%c' is = ( ", vectorName);
+    printf("\nThe vector '%s <%d>' is = ( ", vectorName,dimension);
 
     for (n = 0; n < dimension; n++)
     {
