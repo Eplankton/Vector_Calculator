@@ -51,7 +51,7 @@ void vectorSubtraction()
     int i = 0;
     printf("\nSet the dimension = "); //Set the whole-environment dimension.
     scanf("%d", &dimension);
-    printf("\nWARNING :The dimension has been set as '%d' ,and it can't change during calculation !", dimension);
+    printf("\nWARNING: The dimension has been set as '%d' ,and it can't change during calculation !", dimension);
 
     getchar();
     int fst[dimension];
@@ -91,7 +91,7 @@ void vectorDotproduct()
     int i = 0;
     printf("\nSet the dimension = "); //Set the whole-environment dimension.
     scanf("%d", &dimension);
-    printf("\nWARNING :The dimension has been set as '%d' ,and it can't change during calculation !", dimension);
+    printf("\nWARNING: The dimension has been set as '%d' ,and it can't change during calculation !", dimension);
 
     getchar();
     int fst[dimension];
@@ -118,7 +118,7 @@ void vectorCrossproduct()
     int dimension = 3;
     int i = 0;
     printf("\nSet the dimension = 3"); //Cross product only has definition in three-dimension.
-    printf("\nWARNING :Cross product only has definition in three-dimension !", dimension);
+    printf("\nWARNING: Cross product only has definition in three-dimension !);
 
     getchar();
     int fst[dimension];
@@ -160,7 +160,7 @@ void vectorInput(int dimension, int *r)
 
     if (dimension < 2)
     {
-        printf("\nError ! The dimension should be 2 at least .\n");
+        printf("\nError! The dimension should be 2 at least .\n");
         printf("\nSet the dimension = ");
         scanf("%d", &dimension);
     }
