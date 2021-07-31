@@ -1,6 +1,6 @@
 //From: Eplanlkton  Date: 2021/7/20
 #include <stdio.h>
-#include "vector_calculatior.h"
+#include "vector_calculator.h"
 
 int main()
 {
