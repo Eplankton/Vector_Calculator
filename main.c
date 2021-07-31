@@ -9,16 +9,16 @@ int main()
     for (; key > 0;)
     {
         printf("\n\n");
-        printf("                                #######################\n");
-        printf("                                |     # Vector #      |\n");
-        printf("                                |                     |\n");
-        printf("                                |         +        :1 |\n");
-        printf("                                |         -        :2 |\n");
-        printf("                                |         .        :3 |\n");
-        printf("                                |         x        :4 |\n");
-        printf("                                |                     |\n");
-        printf("                                |        Exit      :0 |\n");
-        printf("                                #######################\n\n");
+        printf("                                #####################\n");
+        printf("                                     @ Vector        \n");
+        printf("                                                     \n");
+        printf("                                         +        :1 \n");
+        printf("                                         -        :2 \n");
+        printf("                                         .        :3 \n");
+        printf("                                         x        :4 \n");
+        printf("                                                     \n");
+        printf("                                        Exit      :0 \n");
+        printf("                                #####################\n\n");
         printf("                                Please enter : ");
 
         scanf("%d", &key);
