@@ -10,7 +10,7 @@ int main()
     {
         printf("\n\n");
         printf("                                #####################\n");
-        printf("                                     @ Vector        \n")；
+        printf("                                     @ Vector        \n");
         printf("                                         +        :1 \n");
         printf("                                         -        :2 \n");
         printf("                                         .        :3 \n");
