@@ -1,4 +1,5 @@
 //From: Eplanlkton  Date: 2021/7/20
+
 #include <stdio.h>
 #include "vector_calculator.h"
 
@@ -9,14 +10,14 @@ int main()
     for (; key > 0;)
     {
         printf("\n\n");
-        printf("                                #####################\n");
-        printf("                                     @ Vector        \n");
-        printf("                                         +        :1 \n");
-        printf("                                         -        :2 \n");
-        printf("                                         .        :3 \n");
-        printf("                                         x        :4 \n");
-        printf("                                        Exit      :0 \n");
-        printf("                                #####################\n");
+        printf("                                ####################\n");
+        printf("                                     @ Vector       \n");
+        printf("                                         +       :1 \n");
+        printf("                                         -       :2 \n");
+        printf("                                         .       :3 \n");
+        printf("                                         x       :4 \n");
+        printf("                                        Exit     :0 \n");
+        printf("                                ####################\n");
         printf("                                Please enter : ");
 
         scanf("%d", &key);
